@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+		<param name="publish_rate" type="double" value="1.0"/>
+    <include file="$(find assignment_2_2022)/launch/assignment1.launch"/>
+    <node pkg="assignment_2" type="publisher_robot" name="publisher_robot" output="screen" launch-prefix="xterm -e"/>
+    <node pkg="assignment_2" type="subscriber_robot" name="subscriber_robot"  output="screen" launch-prefix="xterm -e"/>
+    <node pkg="assignment_2" type="ac_robot" name="ac_robot" output="screen" launch-prefix="xterm -e"/>
+    <node pkg="assignment_2" type="service_robot" name="service_robot" output="screen" launch-prefix="xterm -e"/>
+</launch>
